@@ -11,6 +11,7 @@ public class Pipe
     public int X;
     public int Y;
     public bool OnRightSide;
+    public bool OnLeftSide;
 
     public Pipe(int x, int y, char pipeSymbol)
     {

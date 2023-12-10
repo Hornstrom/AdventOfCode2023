@@ -106,7 +106,7 @@ var testMaze = new PipeMaze(File.ReadAllLines(@"Day10-PipeMaze\test_data2.txt"))
 Console.WriteLine($@"Part 1: Test data returns {testMaze.NavigateMaze()}");
 var maze = new PipeMaze(File.ReadAllLines(@"Day10-PipeMaze\data.txt"));
 Console.WriteLine($@"Part 1: Data returns {maze.NavigateMaze()}");
-// Console.WriteLine($@"Part 2: Test data returns {testSensor.Part2()}");
-// Console.WriteLine($@"Part 2: Data returns {sensor.Part2()}");
+testMaze.Fill();
+maze.Fill();
 
 
