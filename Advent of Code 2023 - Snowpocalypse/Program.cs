@@ -3,6 +3,7 @@
 using Advent_of_Code_2023___Snowpocalypse.Day1_Trebuchet;
 using Advent_of_Code_2023___Snowpocalypse.Day10_PipeMaze;
 using Advent_of_Code_2023___Snowpocalypse.Day11_CosmicExpansion;
+using Advent_of_Code_2023___Snowpocalypse.Day13_Mirrors;
 using Advent_of_Code_2023___Snowpocalypse.Day2_CubeConundrum;
 using Advent_of_Code_2023___Snowpocalypse.Day3_GearRatops;
 using Advent_of_Code_2023___Snowpocalypse.Day4_Scratchcards;
@@ -110,14 +111,17 @@ Console.WriteLine("-- Advent of Code 2023 - Snowpocalypse --");
 // testMaze.Fill();
 // maze.Fill();
 
-Console.WriteLine("Day 11 - Cosmic Expansion");
-var testObservatory = new Observatory(File.ReadAllLines(@"Day11-CosmicExpansion\test_data.txt"));
-Console.WriteLine($@"Part 1: Test data returns {testObservatory.GalaxyDistanceSum()}");
-var observatory = new Observatory(File.ReadAllLines(@"Day11-CosmicExpansion\data.txt"));
-Console.WriteLine($@"Part 1: Data returns {observatory.GalaxyDistanceSum()}");
-
+// Console.WriteLine("Day 11 - Cosmic Expansion");
+// var testObservatory = new Observatory(File.ReadAllLines(@"Day11-CosmicExpansion\test_data.txt"));
+// Console.WriteLine($@"Part 1: Test data returns {testObservatory.GalaxyDistanceSum()}");
+// var observatory = new Observatory(File.ReadAllLines(@"Day11-CosmicExpansion\data.txt"));
+// Console.WriteLine($@"Part 1: Data returns {observatory.GalaxyDistanceSum()}");
 
 //9800424 too high! part 1
 //9553659
 
-
+Console.WriteLine("Day 13 - Point of Incidence");
+var testField = new LavaField(File.ReadAllLines(@"Day13-Mirrors/test_data.txt"));
+Console.WriteLine($@"Part 1: Test data returns {testField.Part1()}");
+var field = new LavaField(File.ReadAllLines(@"Day13-Mirrors/data.txt"));
+Console.WriteLine($@"Part 1: Data returns {field.Part1()}");
