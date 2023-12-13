@@ -2,6 +2,7 @@
 
 using Advent_of_Code_2023___Snowpocalypse.Day1_Trebuchet;
 using Advent_of_Code_2023___Snowpocalypse.Day10_PipeMaze;
+using Advent_of_Code_2023___Snowpocalypse.Day11_CosmicExpansion;
 using Advent_of_Code_2023___Snowpocalypse.Day2_CubeConundrum;
 using Advent_of_Code_2023___Snowpocalypse.Day3_GearRatops;
 using Advent_of_Code_2023___Snowpocalypse.Day4_Scratchcards;
@@ -101,12 +102,22 @@ Console.WriteLine("-- Advent of Code 2023 - Snowpocalypse --");
 // Console.WriteLine($@"Part 2: Test data returns {testSensor.Part2()}");
 // Console.WriteLine($@"Part 2: Data returns {sensor.Part2()}");
 
-Console.WriteLine("Day 10 - Pipe Maze");
-var testMaze = new PipeMaze(File.ReadAllLines(@"Day10-PipeMaze\test_data2.txt"));
-Console.WriteLine($@"Part 1: Test data returns {testMaze.NavigateMaze()}");
-var maze = new PipeMaze(File.ReadAllLines(@"Day10-PipeMaze\data.txt"));
-Console.WriteLine($@"Part 1: Data returns {maze.NavigateMaze()}");
-testMaze.Fill();
-maze.Fill();
+// Console.WriteLine("Day 10 - Pipe Maze");
+// var testMaze = new PipeMaze(File.ReadAllLines(@"Day10-PipeMaze\test_data2.txt"));
+// Console.WriteLine($@"Part 1: Test data returns {testMaze.NavigateMaze()}");
+// var maze = new PipeMaze(File.ReadAllLines(@"Day10-PipeMaze\data.txt"));
+// Console.WriteLine($@"Part 1: Data returns {maze.NavigateMaze()}");
+// testMaze.Fill();
+// maze.Fill();
+
+Console.WriteLine("Day 11 - Cosmic Expansion");
+var testObservatory = new Observatory(File.ReadAllLines(@"Day11-CosmicExpansion\test_data.txt"));
+Console.WriteLine($@"Part 1: Test data returns {testObservatory.GalaxyDistanceSum()}");
+var observatory = new Observatory(File.ReadAllLines(@"Day11-CosmicExpansion\data.txt"));
+Console.WriteLine($@"Part 1: Data returns {observatory.GalaxyDistanceSum()}");
+
+
+//9800424 too high! part 1
+//9553659
 
 
