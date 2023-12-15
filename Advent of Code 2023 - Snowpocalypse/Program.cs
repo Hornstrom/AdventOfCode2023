@@ -4,6 +4,7 @@ using Advent_of_Code_2023___Snowpocalypse.Day1_Trebuchet;
 using Advent_of_Code_2023___Snowpocalypse.Day10_PipeMaze;
 using Advent_of_Code_2023___Snowpocalypse.Day11_CosmicExpansion;
 using Advent_of_Code_2023___Snowpocalypse.Day13_Mirrors;
+using Advent_of_Code_2023___Snowpocalypse.Day15_LensLibrary;
 using Advent_of_Code_2023___Snowpocalypse.Day2_CubeConundrum;
 using Advent_of_Code_2023___Snowpocalypse.Day3_GearRatops;
 using Advent_of_Code_2023___Snowpocalypse.Day4_Scratchcards;
@@ -119,9 +120,20 @@ Console.WriteLine("-- Advent of Code 2023 - Snowpocalypse --");
 
 //9800424 too high! part 1
 //9553659
+//
+// Console.WriteLine("Day 13 - Point of Incidence");
+// var testField = new LavaField(File.ReadAllLines(@"Day13-Mirrors/test_data.txt"));
+// Console.WriteLine($@"Part 1: Test data returns {testField.Part1()}");
+// var field = new LavaField(File.ReadAllLines(@"Day13-Mirrors/data.txt"));
+// Console.WriteLine($@"Part 1: Data returns {field.Part1()}");
+// Console.WriteLine($@"Part 2: Test data returns {testField.Part2()}");
+// Console.WriteLine($@"Part 2: Data returns {field.Part2()}");
 
-Console.WriteLine("Day 13 - Point of Incidence");
-var testField = new LavaField(File.ReadAllLines(@"Day13-Mirrors/test_data.txt"));
-Console.WriteLine($@"Part 1: Test data returns {testField.Part1()}");
-var field = new LavaField(File.ReadAllLines(@"Day13-Mirrors/data.txt"));
-Console.WriteLine($@"Part 1: Data returns {field.Part1()}");
+
+Console.WriteLine("Day 15 - Lens Library");
+var initTest = new InitSequence(File.ReadAllLines(@"Day15-LensLibrary/test-data.txt"));
+Console.WriteLine($@"Part 1: Test data returns {initTest.Part1()}");
+var init = new InitSequence(File.ReadAllLines(@"Day15-LensLibrary/data.txt"));
+Console.WriteLine($@"Part 1: Data returns {init.Part1()}");
+// Console.WriteLine($@"Part 2: Test data returns {testField.Part2()}");
+// Console.WriteLine($@"Part 2: Data returns {field.Part2()}");

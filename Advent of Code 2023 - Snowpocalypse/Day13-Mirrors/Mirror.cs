@@ -5,12 +5,16 @@ public class Mirror
     public string[] Image;
     public int ReflectionInColumn;
     public int ReflectionInRow;
+    public int SecondReflectionColumn;
+    public int SecondReflectionRow;
 
     public Mirror(string[] lines)
     {
         Image = lines;
         ReflectionInColumn = FindReflection(Image);
         ReflectionInRow = FindReflection(Transpose(Image));
+        SecondReflectionColumn = FindSecondReflection(Image, ReflectionInColumn);
+        SecondReflectionRow = FindSecondReflection(Transpose(Image), ReflectionInRow);
     }
 
     private string[] Transpose(string[] image)
@@ -30,7 +34,7 @@ public class Mirror
         return transposedImage;
     }
 
-    private int FindReflection(string[] image)
+    private int FindReflection(string[] image, int? ignoreResultColumn = null)
     {
         var result = 0;
         // Start with finding reflection in a Column
@@ -70,17 +74,47 @@ public class Mirror
         {
             if (possibleColumnReflections[i])
             {
+                if (ignoreResultColumn.HasValue && ignoreResultColumn == i + 1)
+                {
+                    continue;
+                }
                 result = i + 1;
                 nrOfColumnReflections++;
             }
 
-            if (nrOfColumnReflections > 1)
-            {
-                throw new Exception("Why are there two reflections?");
-            }
+            // if (nrOfColumnReflections > 1)
+            // {
+            //     throw new Exception("Why are there two reflections?");
+            // }
         }
 
         return result;
+    }
+
+    public int FindSecondReflection(string[] image, int previousReflection)
+    {
+        for (int y = 0; y < image.Length; y++)
+        {
+            for (int x = 0; x < image[y].Length; x++)
+            {
+                var orgChar = image[y].ElementAt(x);
+                var orgString = image[y];
+                var newChar = orgChar.Equals('#') ? '.' : '#';
+                var newArray = orgString.ToCharArray();
+                newArray[x] = newChar;
+                var newString = new string(newArray);
+                image[y] = newString;
+                var reflection = FindReflection(image, previousReflection);
+                image[y] = orgString;
+                
+                if (reflection != 0 && reflection != previousReflection)
+                {
+                    return reflection;
+                }
+            }
+        }
+
+        return 0;
     }
 
     public static string ToReverseString(string s)

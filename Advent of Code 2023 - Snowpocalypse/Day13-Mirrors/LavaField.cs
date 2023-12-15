@@ -27,4 +27,15 @@ public class LavaField
 
         return result;
     }
+
+    public long Part2()
+    {
+        long result = 0;
+        foreach (var mirror in Mirrors)
+        {
+            result += mirror.SecondReflectionColumn + 100 * mirror.SecondReflectionRow;
+        }
+
+        return result;
+    }
 }
